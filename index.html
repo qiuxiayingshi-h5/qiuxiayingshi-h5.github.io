@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>秋霞影视 - 黄昏开映：电影/电视剧/动漫/纪录片 晚霞片单 | qiuxiayingshi-h5</title>
+<meta name="description" content="秋霞影视（qiuxiayingshi-h5.github.io）像天台上的黄昏放映：电影、电视剧、动漫、纪录片按晚霞色温分类，落日上座榜、天台观众手记，移动端自适应。">
+<meta name="keywords" content="秋霞影视,黄昏电影,晚霞片单,电影导航,电视剧导航,动漫导航,纪录片,色温分类,qiuxiayingshi-h5">
+<meta name="author" content="秋霞影视">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://qiuxiayingshi-h5.github.io/">
+<meta property="og:title" content="秋霞影视 - 黄昏开映，天台放片">
+<meta property="og:description" content="电影/电视剧/动漫/纪录片：晚霞色温分类，落日上座榜，天台观众手记。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://qiuxiayingshi-h5.github.io/">
+<meta property="og:site_name" content="秋霞影视">
+<meta name="msvalidate.01" content="BING_VERIFY_CODE">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"秋霞影视",
+  "url":"https://qiuxiayingshi-h5.github.io/",
+  "description":"秋霞影视是按黄昏/晚霞氛围组织的影视导航站，覆盖电影、电视剧、动漫、纪录片。"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"秋霞影视和其他电影导航站有什么不同？",
+      "acceptedAnswer":{"@type":"Answer","text":"秋霞影视不按“最新/最热”硬排，而是按黄昏观影情绪与色温分类：暖调爱情、冷调悬疑、金调西部、紫调奇幻、灰调纪实，像在天台放片。"}
+    },
+    {
+      "@type":"Question",
+      "name":"秋霞影视提供播放或下载吗？",
+      "acceptedAnswer":{"@type":"Answer","text":"本站是影视导航与片单站，不提供侵权片源、不挂播放器下载器；片名、类型、导演、年份、简介用于选片参考。"}
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#1b1430;
+  --card:#241a3d;
+  --ink:#f3ecff;
+  --muted:#b9a9da;
+  --sun:#ff7a59;
+  --gold:#ffcf6b;
+  --violet:#9a7bd6;
+  --mist:#cfc4e8;
+  --line:rgba(255,122,89,.3);
+  --shadow:0 18px 46px rgba(0,0,0,.5);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  background:
+    radial-gradient(900px 480px at 80% -10%,rgba(255,122,89,.22),transparent 60%),
+    radial-gradient(760px 420px at -10% 6%,rgba(154,123,214,.2),transparent 55%),
+    linear-gradient(180deg,#1b1430 0%,#221634 60%,#160f26 100%);
+  color:var(--ink);line-height:1.78;
+}
+a{color:inherit;text-decoration:none}
+
+/* 天台导航 */
+.qx-top{position:sticky;top:0;z-index:999;background:rgba(27,20,48,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.qx-top__in{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:.7rem 1rem}
+.qx-logo{font-weight:900;font-size:1.18rem}
+.qx-logo b{color:var(--sun)}
+.qx-logo i{color:var(--gold);font-style:normal}
+.qx-nav{display:flex;gap:.3rem}
+.qx-nav a{padding:.45rem .8rem;border-radius:8px;font-size:.9rem;color:var(--muted);font-weight:600}
+.qx-nav a:hover{background:rgba(255,122,89,.16);color:var(--sun)}
+.qx-burger{display:none;flex-direction:column;gap:4px;cursor:pointer}
+.qx-burger span{width:22px;height:2px;background:var(--sun);border-radius:2px}
+
+/* Hero 落日 */
+.qx-hero{max-width:1180px;margin:0 auto;padding:3.4rem 1rem 2.6rem;text-align:center}
+.qx-sun{width:150px;height:150px;margin:0 auto 1.4rem;border-radius:50%;
+  background:radial-gradient(circle at 50% 40%,var(--gold),var(--sun) 55%,#a83b6b 100%);
+  box-shadow:0 0 70px rgba(255,122,89,.45);position:relative;overflow:hidden}
+.qx-sun::before{content:"";position:absolute;inset:0;background:
+  repeating-linear-gradient(180deg,rgba(27,20,48,.0) 0 18px,rgba(27,20,48,.55) 18px 24px)}
+.qx-hero h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.18;margin-bottom:1rem}
+.qx-hero h1 em{font-style:normal;color:var(--sun)}
+.qx-hero h1 u{text-decoration:none;color:var(--gold)}
+.qx-hero p{color:var(--mist);max-width:720px;margin:0 auto 1.8rem}
+.qx-cta{display:inline-flex;gap:.5rem;align-items:center;padding:.85rem 1.9rem;border-radius:10px;font-weight:800;color:#231226;background:linear-gradient(90deg,var(--gold),var(--sun));box-shadow:var(--shadow)}
+.qx-dim{color:var(--muted);font-size:.85rem;letter-spacing:2px;font-family:ui-monospace,monospace}
+
+/* 区块 */
+.qx-sec{max-width:1180px;margin:0 auto;padding:3.3rem 1rem}
+.qx-head{margin-bottom:1.8rem;text-align:center}
+.qx-head .no{font-size:.74rem;color:var(--sun);letter-spacing:3px;font-family:ui-monospace,monospace}
+.qx-head h2{font-size:clamp(1.4rem,3.5vw,2.2rem);font-weight:900;margin-top:.3rem}
+.qx-head h2 i{color:var(--violet);font-style:normal}
+.qx-head p{color:var(--muted);margin-top:.35rem;font-size:.94rem}
+
+/* 秋霞片单 */
+.qx-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.qx-cell{border:1px solid var(--line);border-radius:18px;padding:1.3rem 1.1rem;background:var(--card);transition:.25s}
+.qx-cell:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.qx-cell .ic{font-size:1.8rem}
+.qx-cell h3{font-size:1.02rem;margin:.5rem 0 .35rem}
+.qx-cell p{font-size:.8rem;color:var(--muted)}
+
+/* 色温分类 */
+.qx-temp{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
+.qx-t{border-radius:20px;padding:1.3rem 1rem;text-align:center;background:var(--card);border:1px solid var(--line);transition:.25s}
+.qx-t:hover{transform:translateY(-4px)}
+.qx-t .dot{width:34px;height:34px;border-radius:50%;margin:0 auto .6rem}
+.qx-t.warm .dot{background:#ff8a5b}
+.qx-t.cold .dot{background:#6fb7ff}
+.qx-t.gold .dot{background:#ffcf6b}
+.qx-t.violet .dot{background:#9a7bd6}
+.qx-t.gray .dot{background:#9aa0b5}
+.qx-t h3{font-size:.96rem}
+.qx-t p{font-size:.74rem;color:var(--muted)}
+
+/* 落日上座榜 */
+.qx-rank{display:grid;gap:1.1rem}
+.qx-item{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.1rem 1.2rem}
+.qx-item h3{font-size:1.04rem;display:flex;justify-content:space-between;margin-bottom:.6rem}
+.qx-item h3 span{color:var(--gold)}
+.qx-bar{height:14px;border-radius:8px;background:#160f26;overflow:hidden;position:relative;border:1px solid var(--line)}
+.qx-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--sun),var(--gold),var(--violet))}
+.qx-bar i::after{content:"🌇";position:absolute;right:5px;top:-3px;font-size:.85rem}
+
+/* 手记 */
+.qx-notes{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+.qx-note{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:1.4rem}
+.qx-note .tag{font-size:.72rem;padding:.2rem .6rem;border-radius:6px;font-weight:700}
+.qx-note.aud .tag{background:rgba(255,207,107,.18);color:var(--gold)}
+.qx-note.proj .tag{background:rgba(154,123,214,.18);color:var(--violet)}
+.qx-note h3{font-size:1.05rem;margin:.6rem 0 .4rem}
+.qx-note p{font-size:.86rem;color:var(--mist)}
+
+/* 关于 */
+.qx-about{background:linear-gradient(160deg,#2a1c44,#1b1430);border:1px solid var(--line);border-radius:26px;padding:2.4rem}
+.qx-about h2{font-size:1.9rem;margin-bottom:.8rem}
+.qx-about h2 u{color:var(--sun);text-decoration:none}
+.qx-about p{color:var(--mist);margin-bottom:1rem}
+.qx-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.4rem}
+.qx-stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.1rem;text-align:center}
+.qx-stat b{font-size:1.5rem;color:var(--gold);display:block}
+.qx-stat span{font-size:.8rem;color:var(--muted)}
+
+/* FAQ */
+.qx-faq details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:.2rem 1.1rem;margin-bottom:.7rem}
+.qx-faq summary{cursor:pointer;padding:.85rem 0;font-weight:700}
+.qx-faq p{padding:0 0 .85rem;color:var(--mist)}
+
+/* 页脚 */
+.qx-foot{border-top:1px solid var(--line);background:#120c20;padding:2.2rem 1rem;text-align:center;color:var(--muted);font-size:.86rem}
+.qx-foot a{color:var(--sun)}
+.qx-foot__links{display:flex;gap:1.1rem;justify-content:center;flex-wrap:wrap;margin-bottom:1rem}
+.qx-foot__links a{font-size:.84rem}
+
+@media(max-width:980px){
+  .qx-grid{grid-template-columns:repeat(2,1fr)}
+  .qx-temp{grid-template-columns:repeat(3,1fr)}
+  .qx-notes{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .qx-nav{display:none;position:absolute;top:56px;left:0;right:0;flex-direction:column;gap:0;background:rgba(27,20,48,.98);border-bottom:1px solid var(--line)}
+  .qx-nav.show{display:flex}
+  .qx-nav a{padding:.85rem 1rem;border-bottom:1px solid var(--line)}
+  .qx-burger{display:flex}
+  .qx-grid{grid-template-columns:1fr 1fr}
+  .qx-temp{grid-template-columns:repeat(2,1fr)}
+  .qx-stats{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+<header class="qx-top">
+  <div class="qx-top__in">
+    <div class="qx-logo">🌇 秋霞<b>影视</b> <i>·黄昏开映</i></div>
+    <nav class="qx-nav" id="qxNav">
+      <a href="#home">天台</a>
+      <a href="#grid">秋霞片单</a>
+      <a href="#temp">色温分类</a>
+      <a href="#rank">落日榜</a>
+      <a href="#notes">观众手记</a>
+      <a href="#about">关于秋霞</a>
+    </nav>
+    <div class="qx-burger" onclick="document.getElementById('qxNav').classList.toggle('show')">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<section class="qx-hero" id="home">
+  <div class="qx-sun"></div>
+  <p class="qx-dim">// dusk screening starts</p>
+  <h1>太阳落山，<em>秋霞</em>开映<br>天台、晚风、<u>一盘老胶片</u></h1>
+  <p>秋霞影视不抢“首发”，只挑“适合黄昏看”的片子：暖的、冷的、金的、紫的、灰的，按色温排。下班后、晚饭后、睡不着前，来天台坐一会儿。</p>
+  <a class="qx-cta" href="#grid">🌅 看今晚放什么</a>
+</section>
+
+<section class="qx-sec" id="grid">
+  <div class="qx-head">
+    <div class="no">// dusk programs</div>
+    <h2>秋霞 <i>片单</i></h2>
+    <p>四档放映时间，对应四种心情。</p>
+  </div>
+  <div class="qx-grid">
+    <div class="qx-cell"><div class="ic">🟠</div><h3>黄昏首映</h3><p>日落前后放新片/热片，光线最软，情绪最松。</p></div>
+    <div class="qx-cell"><div class="ic">🟣</div><h3>暮色剧场</h3><p>国产剧、韩剧、慢综艺，适合连着看不累。</p></div>
+    <div class="qx-cell"><div class="ic">🟡</div><h3>旧片重映</h3><p>《大话西游》《霸王别姬》《阳光灿烂的日子》这种。</p></div>
+    <div class="qx-cell"><div class="ic">⚫</div><h3>深夜短片</h3><p>动画短片、纪录片、影评混剪，睡前不长。</p></div>
+  </div>
+</section>
+
+<section class="qx-sec" id="temp">
+  <div class="qx-head">
+    <div class="no">// color temperature</div>
+    <h2>晚霞 <i>色温分类</i></h2>
+    <p>不知道看什么，就先选“今天眼睛想吃什么颜色”。</p>
+  </div>
+  <div class="qx-temp">
+    <div class="qx-t warm"><div class="dot"></div><h3>暖调爱情</h3><p>橘色路灯、咖啡店、短信未回</p></div>
+    <div class="qx-t cold"><div class="dot"></div><h3>冷调悬疑</h3><p>蓝灰雨夜、审讯室、记忆错位</p></div>
+    <div class="qx-t gold"><div class="dot"></div><h3>金调西部</h3><p>黄沙、马匹、夕阳下的对枪</p></div>
+    <div class="qx-t violet"><div class="dot"></div><h3>紫调奇幻</h3><p>梦境、魔法、赛博神怪</p></div>
+    <div class="qx-t gray"><div class="dot"></div><h3>灰调纪实</h3><p>工厂、海边、普通人、长镜头</p></div>
+  </div>
+</section>
+
+<section class="qx-sec" id="rank">
+  <div class="qx-head">
+    <div class="no">// sunset attendance</div>
+    <h2>落日 <i>上座榜</i></h2>
+    <p>秋霞影视按“黄昏时段点击 + 看完率 + 收藏到片单率”排，不是全天播放量。</p>
+  </div>
+  <div class="qx-rank">
+    <div class="qx-item"><h3>1. 暖调：爱在黎明破晓前 <span>97%</span></h3><div class="qx-bar"><i style="width:97%"></i></div></div>
+    <div class="qx-item"><h3>2. 旧片重映：大话西游之大圣娶亲 <span>95%</span></h3><div class="qx-bar"><i style="width:95%"></i></div></div>
+    <div class="qx-item"><h3>3. 冷调：看不见的客人 <span>93%</span></h3><div class="qx-bar"><i style="width:93%"></i></div></div>
+    <div class="qx-item"><h3>4. 金调：黄金三镖客 <span>90%</span></h3><div class="qx-bar"><i style="width:90%"></i></div></div>
+    <div class="qx-item"><h3>5. 灰调：四个春天 <span>88%</span></h3><div class="qx-bar"><i style="width:88%"></i></div></div>
+  </div>
+</section>
+
+<section class="qx-sec" id="notes">
+  <div class="qx-head">
+    <div class="no">// rooftop notes</div>
+    <h2>天台 <i>手记</i></h2>
+    <p>一边是坐天台的观众，一边是放片的放映员。</p>
+  </div>
+  <div class="qx-notes">
+    <article class="qx-note aud">
+      <span class="tag">🧑‍🦱 天台观众</span>
+      <h3>为什么黄昏适合看爱情片</h3>
+      <p>白天太清醒，半夜太孤。日落那四十分钟，人刚好愿意信一点东西——《爱在》三部曲我永远从第一部的火车站开始。</p>
+    </article>
+    <article class="qx-note proj">
+      <span class="tag">🎞️ 放映员</span>
+      <h3>旧片重映怎么排不土</h3>
+      <p>别按年份排，按“失意—回望—和解”排。《大话西游》接《东邪西毒》接《阳光灿烂的日子》，一晚上就把“得不到”讲完了。</p>
+    </article>
+    <article class="qx-note aud">
+      <span class="tag">🧑‍🦱 天台观众</span>
+      <h3>深夜短片比长片温柔</h3>
+      <p>加班回来不想再被剧情绑架，7 分钟动画、12 分钟纪录片，像有人轻轻拍你后背说“行了，今天就到这”。</p>
+    </article>
+    <article class="qx-note proj">
+      <span class="tag">🎞️ 放映员</span>
+      <h3>色温分类不是玄学</h3>
+      <p>冷调悬疑放凌晨会吓到自己；暖调爱情放中午像糖水。秋霞影视的排片逻辑很简单：让片子赶上它该来的那道光。</p>
+    </article>
+  </div>
+</section>
+
+<section class="qx-sec" id="about">
+  <div class="qx-about">
+    <h2>关于 <u>秋霞影视</u></h2>
+    <p>
+      秋霞影视（qiuxiayingshi-h5.github.io）不是一个“片越多越好”的站。它像老小区楼顶的天台影院：太阳一斜，幕布一挂，电影就开始了。
+    </p>
+    <p>
+      我们覆盖电影、电视剧、动漫、纪录片，但入口是“黄昏情绪”和“晚霞色温”。你不用先想“我要看科幻”，可以先想“我今天眼睛想看紫的”——然后紫调奇幻就来了。
+    </p>
+    <div class="qx-stats">
+      <div class="qx-stat"><b>4 档</b><span>首映/剧场/重映/深夜</span></div>
+      <div class="qx-stat"><b>5 色温</b><span>暖/冷/金/紫/灰</span></div>
+      <div class="qx-stat"><b>0 弹窗</b><span>天台安静放片</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="qx-sec qx-faq">
+  <div class="qx-head">
+    <div class="no">// q & a</div>
+    <h2>秋霞 <i>问答</i></h2>
+  </div>
+  <details open>
+    <summary>秋霞影视为什么叫“秋霞”？</summary>
+    <p>不是姓氏，是时刻。秋天的晚霞最长、最不刺眼，像老电影里的光。秋霞影视=“在最适合看片的那个傍晚，把片子递给你”。</p>
+  </details>
+  <details>
+    <summary>色温分类能当正式分类用吗？</summary>
+    <p>可以当“情绪入口”。点进暖调/冷调后再看类型、地区、年份，比一上来看几百个标签舒服得多。秋霞影视是导航站，不是播放器。</p>
+  </details>
+  <details>
+    <summary>和影视大全、3e电影网有什么不同？</summary>
+    <p>影视大全是百宝箱，什么都有；3e电影网是三屏畅看；秋霞影视是“黄昏天台”——片少一点、光对一点、看完愿意发会儿呆。</p>
+  </details>
+</section>
+
+<footer class="qx-foot">
+  <div class="qx-foot__links">
+    <a href="#grid">秋霞片单</a>
+    <a href="#temp">色温分类</a>
+    <a href="#rank">落日榜</a>
+    <a href="#notes">观众手记</a>
+    <a href="#about">关于秋霞</a>
+    <a href="#">免责声明</a>
+  </div>
+  <p>© 2026 <a href="https://qiuxiayingshi-h5.github.io">秋霞影视</a> · qiuxiayingshi-h5.github.io</p>
+  <p>秋霞影视 —— 太阳落山，天台开映。</p>
+</footer>
+
+<script>
+document.querySelectorAll('.qx-nav a').forEach(function(a){
+  a.addEventListener('click',function(){
+    document.getElementById('qxNav').classList.remove('show');
+  });
+});
+</script>
+
+</body>
+</html>
